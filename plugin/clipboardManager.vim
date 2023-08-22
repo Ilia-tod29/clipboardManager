@@ -108,4 +108,3 @@ function! clipboardManager#LoadClipboardOnStart()
 		let s:clipboardHistory = []
 	endif
 endfunction
-
