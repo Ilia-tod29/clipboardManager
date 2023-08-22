@@ -16,7 +16,7 @@ function! clipboardManager#SaveClipboard()
 	endif
 endfunction
 
-function! clipboardManager#ClipboardBrowse(step)
+function! clipboardManager#BrowseClipboard(step)
 	if empty(s:clipboardHistory)
 		echo "Clipboard is empty."
 		return

@@ -1,6 +1,6 @@
-command! -nargs=1 ClipboardBrowse call clipboardManager#ClipboardBrowse(<args>)
-command! ShowClipboard call clipboardManager#ShowClipboard()
-command! ClearClipboard call clipboardManager#ClearClipboard()
+command! -nargs=1 ClipboardBrowse call clipboardManager#BrowseClipboard(<args>)
+command! ClipboardShow call clipboardManager#ShowClipboard()
+command! ClipboardClear call clipboardManager#ClearClipboard()
 
 " Define the default key mappings
 nnoremap <S-Left> :ClipboardBrowse -1<cr>
