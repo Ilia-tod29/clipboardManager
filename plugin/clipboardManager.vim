@@ -12,4 +12,17 @@ nnoremap <c-b>9 :ClipboardBrowse 9<cr>
 augroup SaveText
 	au!
 	autocmd TextYankPost * call clipboardManager#SaveClipboard()
+	autocmd CursorMoved * call clipboardManager#SaveClipboard()
+augroup END
+
+
+augroup SaveClipboardToReg
+	au!
+	autocmd VimLeavePre * call clipboardManager#SaveClipboardOnQuit()
+augroup END
+
+
+augroup RestoreClipboard
+	au!
+	autocmd VimEnter * call clipboardManager#LoadClipboardOnStart()
 augroup END
