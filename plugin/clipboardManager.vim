@@ -93,7 +93,11 @@ endfunction
 function! clipboardManager#LoadClipboardOnStart()
 	" Read the 'z' register to restore the clipboard
 	let restoredHistoryString = getreg('z')
-	let restoredHistory = eval(restoredHistoryString)
+	let restoredHistory = []
+	try
+		let restoredHistory = eval(restoredHistoryString)
+	catch
+	endtry
 
 	" Check if the restored clipboard is actually array
 	if type(restoredHistory) == 3
