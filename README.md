@@ -2,7 +2,7 @@
 
 Isn't it annoying when you copy something to lose your previous copy?
 
-This vim plugin works as a clipboard manager that keeps up to 40 records.
+This vim plugin is a clipboard manager that keeps up to 40 records.
 
 Hope you enjoy it :)
 
@@ -36,8 +36,8 @@ When you make several copies of different texts with this plugin you will be abl
 
 ### Commands
 
-`:BrowseClipboard <args1>` - browses in the clipboard with a step(<args1>). The direction of browsing is determined based on the step `-` positive step &rarr; forward | negative step &rarr; backward.
+`:ClipboardBrowse <args1>` - browses in the clipboard with a step(<args1>). The direction of browsing is determined based on the step `-` positive step &rarr; forward | negative step &rarr; backward.
 
-`:ShowClipboard` - Shows the number of elements in the clipboard and the numbered elements themselves. Note: Elements are being displayed only until the 150th character.
+`:ClipboardShow` - Shows the number of elements in the clipboard and the numbered elements themselves. Note: Elements are being displayed only until the 150th character.
 
-`:ClearClipboard` - Clears the records in the clipboard
+`:ClipboardClear` - Clears the records in the clipboard
