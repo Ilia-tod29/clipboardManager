@@ -1,0 +1,93 @@
+*clipboardManager.txt*  Plugin for manageing your clipboard       Last change: 2023-08-23
+
+Author: Ilia Todorov <https://github.com/Ilia-tod29>,
+                     <https://www.linkedin.com/in/ilia-todorov-185528215>
+========================================================================================
+CONTENTS                                      				
+
+    1. Introduction																  			
+		2. :ClipboardBrowse                                   
+		3. :ClipboardShow                                     
+		4. :ClipboardClear                                    
+		5. Mappings                                           
+		6. Auto commands                                      
+
+========================================================================================
+1. Introduction                                       *clipboardManager-introduction*
+
+    This vim plugin is a clipboard manager that keeps up to 40 records. 
+		It gives you the opportunity to browse trough your clipboard in vim.
+
+========================================================================================
+2. :ClipboardBrowse                                   *clipboardManager-ClipboardBrowse*
+
+    The |ClipboardBrowse| command allows you to browse the clipboard history.
+		
+    Usage:
+        :ClipboardBrowse {step}
+		
+    Arguments:
+        {step} 		The step with which the clipboard will be moved - positive number
+                  for moving forward, negative number for moving backwards.
+		
+    Example: 
+        :ClipboardBrowse 1 " Sets the unnamed register to the next element in your
+                           " clipboard	
+
+========================================================================================
+3. :ClipboardShow                                     *clipboardManager-ClipboardShow*
+
+    The |ClipboardShow| command allows you to browse the clipboard history.
+		
+    Usage:
+        :ClipboardShow 
+		
+    Example: 
+        :ClipboardShow  " Shows your current clipboard
+
+========================================================================================
+4. :ClipboardClear                                    *clipboardManager-ClipboardClear*
+
+    The |ClipboardClear| command clears your current clipboard.
+		
+    Usage:
+        :ClipboardClear 
+		
+    Example: 
+        :ClipboardClear  " Clears your current clipboard
+
+========================================================================================
+5. Mappings                                           *clipboardManager-mappings*
+
+    All these mappings set the unnamed register to a corresponding value from your 
+    clipboard.
+    Ex. Copy: 'a', 'b', 'c' in your unnamed register you have 'c'
+    if you move forward in your clipboard with step one you will have 'b' in your
+    unnamed register, so next time you try to paste you will paste 'b'.
+
+		 
+    *S-Right*,  move forward in your clipboard with step - 1
+		
+    *S-Left*,   move backward in your clipboard with step - 1
+		
+    *C-b3*,     move forward in your clipboard with step - 3
+		
+    *C-b5*,			move forward in your clipboard with step - 5
+		
+    *C-b9*,			move forward in your clipboard with step - 9
+		
+========================================================================================
+6. Auto commands                                      *clipboardManager-Autocmds*
+
+    6.1. When you 'Yank' a text it will save it to the clipboard.
+
+    6.2. [Works with prerequisite] When you copy something from outside of vim when
+         you get back to vim the last copied text is being added to the clipboard.
+
+    6.3. [Keep in mind] When leaving vim the plugin saves your current clipboard to 
+         the register 'z'
+
+    6.4. [Keep in mind] When entering vim the plugin will try to restore your last
+         clipboard from the register 'z'
+
+========================================================================================
