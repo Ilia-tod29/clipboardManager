@@ -21,7 +21,8 @@ CONTENTS
 ========================================================================================
 2. :ClipboardBrowse                                   *clipboardManager-ClipboardBrowse*
 
-    The |ClipboardBrowse| command allows you to browse the clipboard history.
+    The |ClipboardBrowse| command allows you to browse the clipboard history with a 
+    {step}.
 		
     Usage:
         :ClipboardBrowse {step}
@@ -37,7 +38,9 @@ CONTENTS
 ========================================================================================
 3. :ClipboardShow                                     *clipboardManager-ClipboardShow*
 
-    The |ClipboardShow| command allows you to browse the clipboard history.
+    The |ClipboardShow| shows the number of elements in the clipboard and the numbered 
+    elements themselves. 
+    Note: Elements are being displayed only until the 150th character.
 		
     Usage:
         :ClipboardShow 
