@@ -75,9 +75,9 @@ CONTENTS
 		
     *C-b3*,     move forward in your clipboard with step - 3
 		
-    *C-b5*,			move forward in your clipboard with step - 5
+    *C-b5*,     move forward in your clipboard with step - 5
 		
-    *C-b9*,			move forward in your clipboard with step - 9
+    *C-b9*,     move forward in your clipboard with step - 9
 		
 ========================================================================================
 6. Auto commands                                      *clipboardManager-Autocmds*
