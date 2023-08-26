@@ -121,9 +121,3 @@ function! clipboardManager#PPressed()
 		call clipboardManager#SaveClipboard()
 	endif
 endfunction
-
-function! clipboardManager#dummy()
-		" Get the last typed character
-
-    " Your code here
-endfunction
